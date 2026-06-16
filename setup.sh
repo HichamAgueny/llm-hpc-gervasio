@@ -61,6 +61,16 @@ export UV_TOOL_BIN_DIR="$HOME/.tools/hf/bin"
 uv tool install --force huggingface_hub
 export PATH="$UV_TOOL_BIN_DIR:$PATH"
 
+# Make the hf binary path permanent for all future terminal sessions
+if ! grep -q "$UV_TOOL_BIN_DIR" ~/.bashrc; then
+    echo "-> Making 'hf' path persistent in ~/.bashrc..."
+    echo 'export PATH="'"$UV_TOOL_BIN_DIR"':$PATH"' >> ~/.bashrc
+fi
+
+# Reload the profile configuration to refresh the environment
+# (Using '|| true' because some cluster .bashrc files contain interactive shell guards)
+source ~/.bashrc || true
+
 # =====================================================================
 # 4. Sequential Asset Downloads
 # =====================================================================
