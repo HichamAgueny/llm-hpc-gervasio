@@ -78,12 +78,51 @@ Enter your Hugging Face Token: ****************************
 
 Training is managed via `torchtune`, leveraging memory-efficient datasets directly from `.parquet` configurations.
 
+To run fine-tuning on a single GPU:
+```bash
+cd llm-hpc-gervasio/finetuning/job_container
+sbatch job_singleGPU_QA_LoRA.sh 
+```
+
+To run fine-tuning on multiple GPUs:
+```bash
+cd llm-hpc-gervasio/finetuning/job_container
+sbatch job_multiGPU_QA_LoRA.sh
+```
+
 ---
 
 ## Inference & Serving (vLLM)
 
 Inference is optimized by serving the unmerged base model and hot-plugging the trained LoRA layers directly into GPU memory at launch time.
 
+To run serving:
+```bash
+cd llm-hpc-gervasio/inference
+bash srun_sinteractive
+```
+output looks like this:
+```
+srun: job 1285789 queued and waiting for resources
+srun: job 1285789 has been allocated resources
+```
+
+Launch a server: Fine-tuned model with LoRA
+```bash
+bash launch_server_finetuning_with_LoRA.sh
+```
+
+Or only the base model (no fine-tuning)
+
+```bash
+bash launch_server_without_finetuning.sh 
+```
+
+In a new terminal
+```bash
+cd llm-hpc-gervasio/inference
+bash chat.sh
+```
 ---
 
 ## 📄 License & Attributions
