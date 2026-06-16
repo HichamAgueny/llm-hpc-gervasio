@@ -53,6 +53,7 @@ To automatically provision the workspace directories, fetch application dependen
 Run the automated setup script directly on your login or interactive compute node:
 
 ```bash
+mkdir -p /cluster/projects/nn9970k/$USER
 chmod +x setup.sh
 ./setup.sh
 
