@@ -7,7 +7,7 @@ echo
 export PYTHONNOUSERSITE=1
 
 # -------- User configuration --------
-PROJECT_DIR="/cluster/work/projects/nn9970k"
+PROJECT_DIR="/cluster/projects/nn9970k"
 MyWD="$PROJECT_DIR/$USER/llm-hpc-gervasio"
 APPTAINER_SIF="${MyWD}/apptainer/vllm0.12_cu131_py3.12_arm_custom.sif"
 CONNECTION_FILE="${MyWD}/inference/connection.env"

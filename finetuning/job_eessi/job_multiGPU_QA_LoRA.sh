@@ -22,7 +22,7 @@ module load torchtune/0.10.0-foss-2025b-CUDA-12.9.1
 export NUMEXPR_MAX_THREADS=72
 
 # --- Variables and Paths ---
-PROJECT_DIR="/cluster/work/projects/nn9970k"
+PROJECT_DIR="/cluster/projects/nn9970k"
 MyWD="$PROJECT_DIR/$USER/llm-hpc"
 
 # Configs and python files for fine-tuning

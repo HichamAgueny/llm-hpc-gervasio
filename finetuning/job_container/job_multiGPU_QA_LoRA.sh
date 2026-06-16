@@ -17,7 +17,7 @@ echo
 export PYTHONNOUSERSITE=1
 
 # --- Variables and Paths (HOST-SIDE) ---
-PROJECT_DIR="/cluster/work/projects/nn9970k"
+PROJECT_DIR="/cluster/projects/nn9970k"
 MyWD="$PROJECT_DIR/$USER/llm-hpc-gervasio"
 CONTAINER_DIR="${MyWD}/apptainer"
 APPTAINER_SIF="${CONTAINER_DIR}/pytorch_25.08_cuda13.0_arm_custom.sif"
