@@ -54,6 +54,8 @@ Run the automated setup script directly on your login or interactive compute nod
 
 ```bash
 mkdir -p /cluster/projects/nn9970k/$USER
+git clone https://github.com/HichamAgueny/llm-hpc-gervasio.git
+cd llm-hpc-gervasio
 chmod +x setup.sh
 ./setup.sh
 
