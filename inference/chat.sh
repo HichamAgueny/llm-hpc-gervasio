@@ -3,8 +3,8 @@
 # Exit immediately if a command fails
 set -e
 
-PROJECT_DIR="/cluster/work/projects/nn9970k"
-MyWD="$PROJECT_DIR/$USER/finetuning"
+PROJECT_DIR="/cluster/projects/nn9970k"
+MyWD="$PROJECT_DIR/$USER/llm-hpc-gervasio"
 CONNECTION_FILE="${MyWD}/inference/connection.env"
 
 # Wait until the server connection file exists
